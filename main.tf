@@ -12,7 +12,7 @@ terraform {
   required_version = ">= 1.1.0"
 
   cloud {
-    organization = "LaClair-TF-Test""
+    organization = "LaClair-TF-Test"
 
     workspaces {
       name = "Demo-GitHub-Actions"
