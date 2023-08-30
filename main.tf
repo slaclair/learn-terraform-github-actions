@@ -56,6 +56,9 @@ resource "aws_instance" "web" {
               echo "Hello World" > /var/www/html/index.html
               systemctl restart apache2
               EOF
+  tags = {
+    Privacy = ""
+  }
 }
 
 resource "aws_security_group" "web-sg" {
@@ -72,6 +75,9 @@ resource "aws_security_group" "web-sg" {
     to_port     = 0
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    Privacy = ""
   }
 }
 
